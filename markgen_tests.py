@@ -96,8 +96,13 @@ class MarkgenTests(unittest.TestCase):
                           emphasis(u'yo momma')])
 
         base_path = os.path.abspath(os.path.dirname(__file__))
+
         file_content = open(os.path.join(base_path,
-            'markgen_test_doc.md'), 'r').read().decode('utf8')[:-1]
+            'markgen_test_doc.md'), 'r').read()
+        if hasattr(file_content, 'decode'):
+            file_content = file_content.decode('utf8')
+
+        file_content = file_content[:-1]
 
         assert content == file_content
 
