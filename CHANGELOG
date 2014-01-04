@@ -1,6 +1,11 @@
 ChangeLog for markgen
 =====================
 
+0.9.1 (05-01-2014)
+------------------
+
+ - Added explicit use of unicode strings everywhere.
+
 0.9.0 (04-01-2014)
 ------------------
 

@@ -8,7 +8,7 @@ setup(
     description='Python library for the programmatic generation of markdown text',
     long_description=open('README.rst').read(),
     provides=['markgen'],
-    version='0.9.0',
+    version='0.9.1',
     author='Wes Mason',
     author_email='wes@1stvamp.org',
     url='https://github.com/1stvamp/markgen.py',
