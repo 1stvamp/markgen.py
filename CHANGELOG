@@ -1,6 +1,11 @@
 ChangeLog for markgen
 =====================
 
+0.9.5 (07-01-2014)
+------------------
+
+ - Added inline_pre wrapper for pre(content, inline=True) to more easily allow mapping <code> blocks.
+
 0.9.4 (05-01-2014)
 ------------------
 
