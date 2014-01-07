@@ -3,13 +3,19 @@ import os
 import unittest
 
 from markgen import (paragraph, link, image, ulist, emphasis, header, quote,
-                     olist, pre, inline_pre)
+                     olist, pre)
 
 
 class MarkgenTests(unittest.TestCase):
 
     def test_pagagraph(self):
         p = paragraph(u'hello world')
+        assert p == u"hello world\n\n"
+
+        p = paragraph(u'hello world\n\n')
+        assert p == u"hello world\n\n"
+
+        p = paragraph(u'\n\nhello world\n\n')
         assert p == u"hello world\n\n"
 
     def test_link(self):
@@ -80,9 +86,6 @@ class MarkgenTests(unittest.TestCase):
         assert p == u'    this quick brown fox\n    jumped over the\n    lazy codeblock.'
 
         p = pre(u'echo "hello world!"', True)
-        assert p == u'`echo "hello world!"`'
-
-        p = inline_pre(u'echo "hello world!"')
         assert p == u'`echo "hello world!"`'
     
     def test_generate_document(self):

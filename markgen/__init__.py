@@ -10,7 +10,7 @@ def quote(content, prefix=u'> '):
 
 
 def paragraph(content):
-    return u"{0}\n\n".format(content)
+    return u"{0}\n\n".format(content.strip())
 
 
 def emphasis(content, strength=1, char=u'*'):
@@ -39,7 +39,3 @@ def pre(content, inline=False):
         return u"`{0}`".format(content)
 
     return quote(content, u'    ')
-
-
-def inline_pre(content):
-    return pre(content, True)
