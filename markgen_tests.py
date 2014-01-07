@@ -3,7 +3,7 @@ import os
 import unittest
 
 from markgen import (paragraph, link, image, ulist, emphasis, header, quote,
-                     olist, pre)
+                     olist, pre, inline_pre)
 
 
 class MarkgenTests(unittest.TestCase):
@@ -80,6 +80,9 @@ class MarkgenTests(unittest.TestCase):
         assert p == u'    this quick brown fox\n    jumped over the\n    lazy codeblock.'
 
         p = pre(u'echo "hello world!"', True)
+        assert p == u'`echo "hello world!"`'
+
+        p = inline_pre(u'echo "hello world!"')
         assert p == u'`echo "hello world!"`'
     
     def test_generate_document(self):

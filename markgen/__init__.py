@@ -39,3 +39,7 @@ def pre(content, inline=False):
         return u"`{0}`".format(content)
 
     return quote(content, u'    ')
+
+
+def inline_pre(content):
+    return pre(content, True)
