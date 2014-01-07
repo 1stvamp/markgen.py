@@ -1,6 +1,13 @@
 ChangeLog for markgen
 =====================
 
+0.9.6 (07-01-2014)
+------------------
+
+ - Removed inline_pre, idiotic idea.
+ - Now .strip() content passed to paragraph, to normalise whitespace.
+
+
 0.9.5 (07-01-2014)
 ------------------
 
